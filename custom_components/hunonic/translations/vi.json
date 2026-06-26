@@ -1,0 +1,53 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Đăng nhập Hunonic",
+        "description": "Nhập số điện thoại và mật khẩu tài khoản Hunonic.\n\n⚠️ **Nên tạo một TÀI KHOẢN HUNONIC MỚI riêng cho Home Assistant**, rồi từ tài khoản chính **chia sẻ nhà/thiết bị** sang tài khoản mới đó. Nếu đăng nhập bằng tài khoản chính (đang dùng trên điện thoại), **điện thoại của bạn có thể bị đăng xuất** vì Hunonic giới hạn số phiên đăng nhập. (Tài khoản được share sẽ tự động chấp nhận khi đăng nhập.)",
+        "data": {
+          "phone": "Số điện thoại",
+          "password": "Mật khẩu"
+        },
+        "data_description": {
+          "phone": "Ví dụ: 0868123456 — nội địa (09..., 08...) hoặc quốc tế (+84...)"
+        }
+      },
+      "homes": {
+        "title": "Chọn nhà",
+        "description": "Tick các nhà bạn muốn nạp vào Home Assistant (mặc định tất cả). Mỗi nhà là một 'trạm trung chuyển' riêng. Đổi lại sau qua nút Cấu hình — không cần đăng nhập lại.",
+        "data": {
+          "home_ids": "Nhà"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Số điện thoại hoặc mật khẩu không đúng.",
+      "cannot_connect": "Không thể kết nối đến máy chủ Hunonic. Kiểm tra kết nối internet.",
+      "unknown": "Lỗi không xác định. Vui lòng thử lại."
+    },
+    "abort": {
+      "already_configured": "Tài khoản này đã được cấu hình trong Home Assistant."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Chọn nhà",
+        "description": "Tick các nhà muốn nạp vào Home Assistant. Bỏ tick để gỡ nhà khỏi HA. Lưu xong tích hợp tự tải lại.",
+        "data": {
+          "home_ids": "Nhà"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "connectivity": {
+        "state": {
+          "online": "Trực tuyến",
+          "offline": "Ngoại tuyến"
+        }
+      }
+    }
+  }
+}

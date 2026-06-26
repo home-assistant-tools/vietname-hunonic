@@ -1,0 +1,5 @@
+{
+  "name": "Hunonic Smart Home",
+  "render_readme": true,
+  "homeassistant": "2023.9.0"
+}

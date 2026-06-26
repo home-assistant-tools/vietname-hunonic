@@ -1,0 +1,53 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Hunonic login",
+        "description": "Enter your Hunonic account phone number and password.\n\n⚠️ **Recommended: create a NEW separate Hunonic account for Home Assistant**, then share your home/devices to it from your main account. If you log in with your main account (the one used on your phone), **your phone may get logged out** because Hunonic limits the number of login sessions. (Shared homes are auto-accepted on login.)",
+        "data": {
+          "phone": "Phone number",
+          "password": "Password"
+        },
+        "data_description": {
+          "phone": "Example: 0868123456 — local (09..., 08...) or international (+84...)"
+        }
+      },
+      "homes": {
+        "title": "Select homes",
+        "description": "Tick the homes to load into Home Assistant (all by default). Each home becomes its own hub. Change later via Configure — no re-login needed.",
+        "data": {
+          "home_ids": "Homes"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Incorrect phone number or password.",
+      "cannot_connect": "Cannot connect to Hunonic server. Check your internet connection.",
+      "unknown": "Unknown error. Please try again."
+    },
+    "abort": {
+      "already_configured": "This account is already configured in Home Assistant."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Select homes",
+        "description": "Tick the homes to load into Home Assistant. Untick to remove a home from HA. The integration reloads after saving.",
+        "data": {
+          "home_ids": "Homes"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "connectivity": {
+        "state": {
+          "online": "Online",
+          "offline": "Offline"
+        }
+      }
+    }
+  }
+}
